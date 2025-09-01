@@ -18,8 +18,8 @@ import logging
 
 # ------------------ USER CONFIGURATION ------------------------------------
 # Set these two variables to the path of your ASR master file and the desired output Excel file.
-INPUT_FILE = Path(r'C:\Users\lovey\Downloads\asr-2024\asr-2024\2024_ASR1MON_NATIONAL_MASTER_FILE.txt')   # <-- change this to your input file path
-OUTPUT_FILE = Path(r'C:\Users\lovey\OneDrive\Desktop\decoded_fbi_data.xlsx')  # <-- change this if you want a different output path
+INPUT_FILE = Path(r'<replace-with-file-path-to-the-original-encoded-file>')   # <-- change this to your input file path
+OUTPUT_FILE = Path(r'<replace-with-file-path-to-empty-excel-file>')  # <-- change this if you want a different output path
 RECORD_LENGTH = 564  # expected fixed width record length (adjust if needed)
 HEADER_OFFENSE_CODE = '000'  # offense code indicating a header record (adjust if data differs)
 
@@ -162,3 +162,4 @@ if __name__ == '__main__':
     details, headers = process_file(INPUT_FILE)
     write_to_excel(details, headers, OUTPUT_FILE)
     logging.info('Finished. Output written to %s', OUTPUT_FILE)
+
